@@ -1,0 +1,108 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+html {
+    background: rgba(3, 33, 52,1);
+    /*background: -moz-linear-gradient(top, rgba(3, 33, 52,1) 0%, rgba(10, 65, 93,1) 50%, rgba(26, 119, 146,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(3, 33, 52,1)), color-stop(50%, rgba(10, 65, 93,1)), color-stop(100%, rgba(26, 119, 146,1)));
+    background: -webkit-linear-gradient(top, rgba(3, 33, 52,1) 0%, rgba(10, 65, 93,1) 50%, rgba(26, 119, 146,1) 100%);
+    background: -o-linear-gradient(top, rgba(3, 33, 52,1) 0%, rgba(10, 65, 93,1) 50%, rgba(26, 119, 146,1) 100%);
+    background: -ms-linear-gradient(top, rgba(3, 33, 52,1) 0%, rgba(10, 65, 93,1) 50%, rgba(26, 119, 146,1) 100%);*/
+    /*background: linear-gradient(to bottom, rgba(3, 33, 52,1) 0%, rgba(10, 65, 93,1) 50%, rgba(26, 119, 146,1) 100%);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#032032', endColorstr='#13738F', GradientType=1 );*/
+}
+body{
+    margin:0;
+    padding:0;
+    font-family:Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+    font-size:14px;
+    -webkit-font-smoothing:antialiased
+}
+
+.back {
+    position: absolute;
+    top: 55px;
+    left: 43px;
+    overflow: hidden;
+}
+.back a{
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+}
+.back a img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.back h6{
+    float: left;
+    font-size: 34px;
+    color: #fff;
+    margin: 0;
+}
+.common-wrap {
+    height: 100vh;
+    padding: 120px 80px 0px 43px;
+    background: -webkit-linear-gradient(#14161d,#282b39); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#14161d,#282b39); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#14161d,#282b39); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#14161d,#282b39); /* 标准的语法 */
+}
+
+
+
+
+.container-pay .top {
+    clear: all;
+    position: absolute;
+    left: 70px;
+    top: 40px;
+}
+
+.form-error {
+    display: none;
+}
+
+#simplemodal-overlay {
+    background-color: #000;
+}
+
+#simplemodal-container {
+    /*background: url(../img/popbg.png) no-repeat;*/
+    margin-top: 45px;
+}
+
+#simplemodal-data {
+    background-color: #000;
+    color: #fff;
+    padding: 3rem;
+    /*border-radius: 10px;*/
+}
+
+#simplemodal-container a.modalCloseImg {
+    background:url(../img/close-c.png) no-repeat;
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+    display:inline;
+    z-index: 3200;
+    position:absolute;
+    bottom: 0;
+    left: -60px;
+    cursor:pointer;
+    /*display: none;*/
+}
+
+#termsbox {
+    color: #fff;
+    border-radius: 10px;
+    padding:10px;
+    background: -webkit-linear-gradient(#3d3f46,#2f3138); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#3d3f46,#2f3138); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#3d3f46,#2f3138); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#3d3f46,#2f3138); /* 标准的语法 */
+}

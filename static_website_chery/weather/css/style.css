@@ -1,0 +1,536 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+html {
+    /*background: url(http://www.kaikaibao.com.cn/loading.gif) center center no-repeat;*/
+}
+body{
+    margin:0;
+    padding:0;
+    font-family:Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+    font-size:14px;
+    -webkit-font-smoothing:antialiased
+}
+.container-index {
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% auto;
+    display: flex;
+    height: 100vh;
+}
+
+.container-index .content {
+    flex: 1 0 60%;
+    display: flex;
+}
+
+.container-index .content .left {
+    flex: 1 0 50%;
+    padding: 3rem 0 0 3rem;
+}
+
+.container-index .content .left h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 3.5rem;
+}
+
+.container-index .content .left span {
+    font-size: 2rem;
+    font-weight: 400;
+    padding-left: .5rem;
+}
+
+.container-index .content .left .desc {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+.container-index .content .left .price {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container-index .content .left .price span {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.container-index .content .left .price .action {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.container-index .content .left button#buy {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    background-color: #ff8a02;
+    color: #fff;
+    padding: .8rem 2.8rem;
+    border-radius: 6px;
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.container-index .qrcode {
+    /*flex: 0 1 40%;*/
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.container-index .qrcode p {
+    font-size: 0.8rem;
+    margin-right: 30px;
+}
+
+.container-index .qrcode #qrcode {
+    background-color: #fff;
+    padding: 20px 0px;
+    margin-right: 30px;
+}
+
+.container-index .qrcode .qrcode-wrapper {
+}
+
+.container-index .qrcode .qrcode-wrapper #qrcode {
+    position: relative;
+    right: 0;
+    width: 200px;
+}
+
+.container-index .qrcode p {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+}
+
+
+.container-form {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.container-form .header {
+    display: flex;
+    padding: 2% 4% 0;
+}
+
+.container-form .header .title {
+    flex: initial;
+}
+
+.container-form .header .title h2 {
+    text-align: left;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.container-form .header .title h2 span {
+    font-weight: 400;
+    padding-left: 1rem;
+    font-size: 2rem;
+}
+
+.container-form .header .title p {
+    margin: .2rem;
+    font-size: 1.5rem;
+    color: #454545;
+}
+
+.container-form .header .title span {
+    font-size: 1.2rem;
+    color: #ff8a02;
+    border: 1px solid #ff8a02;
+    padding: 2px 30px;
+    border-radius: 6px;
+    float: right;
+}
+
+.container-form .button {
+    flex: 2 0;
+    text-align: right;
+}
+
+.container-form .buy {
+    margin-top: 2.6rem;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    background-color: #ff8a02;
+    color: #fff;
+    padding: .8rem 3.8rem;
+    border-radius: 6px;
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.container-form .buy.disabled {
+    background-color: #ccc;
+}
+
+.container-form .prices {
+    flex: 1;
+    text-align: right;
+}
+
+.container-form .prices .price {
+    background-color: #fff;
+    border: 1px solid #eaeaee;
+    border-radius: 5px;
+    margin-top: 2rem;
+    padding-bottom: 1.1rem;
+}
+
+.container-form .prices .price > div {
+    text-align: center;
+    border: 1px solid #eaeaee;
+    border-radius: 5px;
+    margin: 1rem 1rem 0;
+    padding: .8rem;
+    font-size: 1.8rem;
+    color: #b6b6b6;
+}
+
+.container-form .prices .price > div span {
+    padding-left: .2rem;
+    font-size: 1rem;
+}
+
+.container-form .prices .price > .active {
+    border-color: #ff8a02;
+    color: #ff8a02;
+    background: url(../img/selected.png) no-repeat;
+    background-size: 1.2rem;
+    background-position: bottom .5rem right .5rem;
+}
+
+.container-form .content {
+    text-align: left;
+    position: relative;
+    padding: 0 4%;
+}
+
+.container-form .content .main {
+}
+
+.container-form .content .main .form {
+    background-color: #fff;
+    margin: 2rem 1rem 2rem 0;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    height: 68%;
+}
+
+.container-form .content .main .form form > div {
+    display: flex;
+    padding: 1.1rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.container-form .content .main .form form > div:last-child {
+    border-bottom: none;
+}
+
+.container-form .content .main .form form label {
+    flex: initial;
+    width: 30%;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.container-form .content .main .form form input {
+    width: 100%;
+    text-align: right;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+}
+
+.container-form .content .main .form form .has-error label {
+    color: #f00;
+}
+
+.container-form .content .main .form form input.error {
+    color: #f00;
+}
+
+.container-form .content .term_and_condition {
+    font-size: .9rem;
+    padding: .5rem 1rem;
+}
+
+.container-form .content .term_and_condition i {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+.container-form .content .term_and_condition i.checked {
+    background: url(../img/checked.png);
+    background-size: 100%;
+}
+.container-form .content .term_and_condition i.unchecked {
+    background: url(../img/unchecked.png);
+    background-size: 100%;
+}
+
+
+.container-form .content .term_and_condition span {
+    color: #027bff;
+}
+
+
+/*.container-form {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.container-form .header {
+    display: flex;
+    padding: 2% 4% 0;
+}
+
+.container-form .header .title {
+    flex: initial;
+}
+
+.container-form .header .title h2 {
+    text-align: left;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.container-form .header .title h2 span {
+    font-weight: 400;
+    padding-left: 1rem;
+    font-size: 2rem;
+}
+
+.container-form .header .title p {
+    margin: .2rem;
+    font-size: 1.5rem;
+    color: #454545;
+}
+
+.container-form .button {
+    flex: 2 0;
+    text-align: right;
+}
+
+.container-form .buy {
+    margin-top: 2.6rem;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    background-color: #ff8a02;
+    color: #fff;
+    padding: .8rem 3.8rem;
+    border-radius: 6px;
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.container-form .buy.disabled {
+    background-color: #ccc;
+}
+
+.container-form .prices {
+    flex: 1;
+    text-align: right;
+}
+
+.container-form .prices .price {
+    background-color: #fff;
+    border-color: #ff8a02;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.container-form .prices .price > div {
+    text-align: center;
+    border: 1px solid #eaeaee;
+    border-radius: 5px;
+    padding: .8rem;
+    font-size: 7rem;
+    color: #b6b6b6;
+    height: 11rem;
+}
+
+.container-form .prices .price > div span {
+    padding-left: .2rem;
+    font-size: 3rem;
+}
+
+.container-form .prices .price > .active {
+    border-color: #ff8a02;
+    color: #ff8a02;
+    padding-top: 3rem;
+    background-size: 1.2rem;
+    background-position: bottom .5rem right .5rem;
+}
+
+.container-form .content {
+    display: flex;
+    text-align: left;
+    position: relative;
+    padding: 0 4%;
+}
+
+.container-form .content .main {
+    flex: 0 0 71%;
+}
+
+.container-form .content .main .form {
+    background-color: #fff;
+    margin: 2rem 1rem 2rem 0;
+    height: 68%;
+}
+
+.container-form .content .main .form form > div {
+    display: flex;
+    padding: .5rem 1rem;
+    margin: 1.1rem 0;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+}
+
+.container-form .content .main .form form label {
+    flex: initial;
+    width: 30%;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.container-form .content .main .form form input {
+    width: 100%;
+    text-align: right;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+}
+
+.container-form .content .main .form form .has-error label {
+    color: #f00;
+}
+
+.container-form .content .main .form form input.error {
+    color: #f00;
+}
+
+.container-form .term_and_condition {
+    font-size: .9rem;
+    padding-top: 2rem;
+}
+
+.container-form .term_and_condition a {
+    color: #007ef9;
+}
+
+.container-form .term_and_condition i {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+.container-form .content .term_and_condition span {
+    color: #027bff;
+}
+*/
+
+.container-pay {
+    display: flex;
+}
+
+.container-pay .qrcode {
+    flex: initial;
+    width: 55%;
+    margin-top: 5%;
+}
+
+.container-pay .qrcode .content {
+    text-align: center;
+    position: relative;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    padding: 1rem 0;
+    left: 40%;
+}
+
+.container-pay .qrcode .content span {
+    color: #ff8802;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.container-pay .content {
+    width: 50%;
+    margin-top: 15%;
+}
+
+.container-pay .content .paymethods > div {
+    color: #454545;
+    font-size: 1.2rem;
+    width: 9rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: .6rem 1.5rem;
+    border: 1px solid #ebebeb;
+}
+
+.container-pay .content .paymethods > div.active {
+    border: 1px solid #ff8802;
+    background: url(../img/selected.png) no-repeat;
+    background-size: 1.2rem;
+    background-position: bottom .5rem right .5rem;
+}
+
+.form-error {
+    display: none;
+}
+
+#simplemodal-overlay {
+    background-color: #fff;
+}
+
+#simplemodal-data {
+    background-color: #000;
+    color: #fff;
+    padding:3rem;
+    border-radius: 10px;
+}
+
+#simplemodal-container a.modalCloseImg {
+    background:url(../img/close.png) no-repeat;
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+    display:inline;
+    z-index:3200;
+    position:absolute;
+    top:-15px;
+    right:-18px;
+    cursor:pointer;
+}
+
+#termsbox {
+    background-color: #fff;
+    border-radius: 10px;
+    padding:2rem;
+    -moz-box-shadow:0px 0px 20px #eee; -webkit-box-shadow:0px 0px 20px #eee; box-shadow:0px 0px 20px #eee;
+}

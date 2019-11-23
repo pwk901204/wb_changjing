@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>自驾险</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">  
+    <link href="./css/style.css" rel="stylesheet"></head>
+    <style>
+        
+
+        
+        .container-form .prices {
+            position: relative;
+            width: 325px;
+            text-align: right;
+            border-left: 1px solid #343740;
+        }
+
+        .container-form .prices .price {
+            /* border-radius: 5px;
+            margin-top: 10px;
+            padding: 20px;
+            font-size: 50px; */
+        }
+
+        .container-form .prices .price > div {
+            text-align: center;
+            border-radius: 7px;
+            margin: 0px 0 23px 30px;
+            /*padding: 15px 20px; */
+            font-size: 30px;
+            color: #fff;
+            width: 296px;
+            line-height: 72px;
+            background-color: #23252e;
+        }
+
+        .container-form .prices .price > .active {
+            background: url(../img/selected-c.png) 20px 20px no-repeat;
+            background-color: #4dc8e7;
+            /* color: #fff; */
+        }
+
+        .container-form .prices .button {
+            /* flex: 2 0;
+            text-align: right; */
+        }
+
+        .container-form .prices .buy {
+            margin-top: 76px;
+            font-size: 30px;
+            background-color: #f5902b;
+            color: #fff;
+            width: 296px;
+            height: 80px;
+            line-height: 80px;
+            border: none;
+            -webkit-appearance: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        .container-form .prices .buy.disabled {
+        }
+
+
+        .container-form .content {
+            display: flex;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            justify-content: space-between;
+        }
+
+        .container-form .content .main {
+           width: 824px;
+        }
+
+        .container-form .content .main .title {
+            
+        }
+
+        .container-form .content .main .title h2 {
+            font-size: 26px;
+            color: #ffffff;
+            line-height: 36px;
+        }
+
+        .container-form .content .main .form form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 330px;
+            align-items: center;
+            padding-right: 20px;
+            
+        }
+
+        .container-form .content .main .form form > div {
+            width: 388px;
+            height: 130px;
+            border-radius: 5px 5px;
+            padding: 20px 25px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .container-form .content .main .form form > div.licenseno,.idcard{
+            background: -webkit-linear-gradient(#242630,#272a35); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(#242630,#272a35); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#242630,#272a35); /* Firefox 3.6 - 15 */
+            background: linear-gradient(#242630,#272a35); /* 标准的语法 */
+        }
+        .container-form .content .main .form form > div.mobile,.username{
+            background: -webkit-linear-gradient(#282b36,#2d303d); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(#282b36,#2d303d); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#282b36,#2d303d); /* Firefox 3.6 - 15 */
+            background: linear-gradient(#282b36,#2d303d); /* 标准的语法 */
+        }
+
+
+        .container-form .content .main .form form label {
+            font-size: 30px;;
+            color: #aab8cd;
+        }
+
+        .container-form .content .main .form form input {
+            background:transparent;
+            width: 100%;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #484e5a;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .container-form .content .main .form form input::placeholder {
+            color: #fff;
+        }
+
+        .container-form .content .main .form form .has-error label {
+            color: #f00;
+        }
+
+        .container-form .content .main .form form input.error {
+            color: #f00;
+        }
+
+        /* 投保须知 */
+        .container-form .content .term_and_condition {
+            color: #aab8cd;
+            font-size: 24px;
+            padding: 0 10px;
+            vertical-align: middle;
+        }
+
+        .container-form .content .term_and_condition i {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+
+        .container-form .content .term_and_condition i.checked {
+            background: url(./img/checked-c.png);
+            background-size: 100%;
+            vertical-align: -2px;
+        }
+        .container-form .content .term_and_condition i.unchecked {
+            background: url(./img/unchecked-c.png);
+            background-size: 100%;
+            vertical-align: -2px;
+        }
+
+
+        .container-form .content .term_and_condition > span {
+            margin-left: 10px;
+            color: #aab8cd;
+            font-size: 26px;
+        }
+
+        .container-form .content .term_and_condition > span > span {
+            /*color: #ff8a02;*/
+        }
+
+    </style>
+    <script>
+    var _hmt = _hmt || [];
+    </script>
+<body>
+    <div class="common-wrap container-form">
+        <div class="back">
+            <a href="javascript:history.go(-1)"><img src="./img/back_icon.png" alt=""></a>
+            <h6>自驾险</h6>
+        </div>
+        <div class="content">
+            <div class="main">
+                <div class="title">
+                    <h2>保障范围(保全家)&nbsp;&nbsp;1.意外身故/伤残10万元&nbsp;&nbsp;2.意外医疗1万元</h2>
+                </div>
+                <div class="form">
+                    <form id="form" action="">
+                        <div class="licenseno">
+                            <label for="licenseno">车牌号</label>
+                            <input type="text" readonly id="licenseno" name="licenseno" placeholder="" data-validation="required,licenseno">
+                        </div>
+                        <div class="idcard">
+                            <label for="idcard">投保人身份证号</label>
+                            <input type="text" readonly id="idcard" name="idcard" placeholder="" data-validation="required,idcard">
+                        </div>
+                        <div class="username">
+                            <label for="name">投保人姓名</label>
+                            <input type="text" readonly id="name" name="name" placeholder="" data-validation="required">
+                        </div>
+                       
+                        <div class="mobile">
+                            <label for="phone">手机号码</label>
+                            <input type="number" readonly id="mobile" name="mobile" placeholder="" data-validation="required,mobile">
+                        </div>
+                    </form>
+                </div>
+                <p class="term_and_condition"><i class="checked"></i> <span>我已阅读并同意 <span id="terms">《投保须知》</span><span id="conditions">《保险条款》</span></span></p>
+            </div>
+            <div class="prices">
+                <div class="price">
+                    <div data-product-id="1" class="active"> 5元 / 1天</div>
+                    <div data-product-id="2" class=""> 10元 / 3天</div>
+                    <div data-product-id="3" class=""> 20元 / 7天</div>
+                </div>
+                <div class="button">
+                    <button class="buy">立即购买</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.77/jquery.form-validator.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplemodal/1.4.4/jquery.simplemodal.min.js"></script>
+<script src="./js/form.js"></script>
+<script>
+(function() {
+  _hmt.push(['_setAutoPageview', false]);
+  _hmt.push(['_trackPageview', '/m5/' + location.hash]);
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?77c6827235cc32aff69e2594c7e4f6b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

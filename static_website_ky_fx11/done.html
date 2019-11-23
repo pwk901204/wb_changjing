@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover">
+    <title>自驾险</title>
+    <link href="./css/reset.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="./js/common.js"></script>
+    <script>
+    var _hmt = _hmt || [];
+    </script>
+</head>
+  <body>
+    <div class="container">
+        <a class="back" href="javascript:;"></a>
+
+        <div class="complete">
+            <div class="complete-image">
+                <img src="./img/ok2.png">
+            </div>
+            <p class="complete-message-green">支付成功</p>
+            <p class="complete-message">感谢您对我们的支持~</p>
+
+            <div class="complete-action">
+                <button id="orderbtn" class="btn btn-primary btn-large">查看我的保单</button>
+                <button id="closeit" class="btn btn-large">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="./js/libs/jquery.min.js"></script>
+    <script src="./js/libs/jquery.simplemodal.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplemodal/1.4.4/jquery.simplemodal.min.js"></script>
+    <script>
+        if (typeof window.androidInterface != 'undefined') {
+            window.androidInterface.payment_done();
+        }
+
+        $().ready(function () {
+            $('#orderbtn').on('click', function () {
+                // location.href = '//autodev.openspeech.cn/autoh5static/resource/car/dfxkF580/v1/staticAssets/insurance/orderList.html?dId=' + location.hash.split('?')[0].split('/').slice(-1)[0]
+                location.href = 'https://autodev.openspeech.cn/autoh5static/resource/car/kybx/v1/staticAssets/insurance/orderList.html?dId=' + location.hash.split('?')[0].split('/').slice(-1)[0]
+            })
+            $('#closeit').on('click', function () {
+                closeWin()
+                // window.hostApp.dismissWindow()
+            })
+            setTimeout(function () {
+                closeWin();
+                // window.hostApp.dismissWindow()
+            }, 15000)
+            $('.back').click(function(){
+                location.href = 'index.html'
+            })
+        })
+
+        function closeWin() {
+            var native = window.hostApp
+
+            if (native && native.dismissWindow) {
+                native.dismissWindow()
+                native.clickSound && native.clickSound()
+            } else {
+                $.modal("<div class='tipMsg'>无法关闭应用</div>", {
+                    close: false,
+                    onShow: function() {
+                        setTimeout(function () {
+                            $.modal.close();
+                        }, 2000);
+                    }
+                });
+            }
+        }
+    </script>
+    <script>
+    (function() {
+      _hmt.push(['_setAutoPageview', false]);
+      _hmt.push(['_trackPageview', '/m5/' + location.hash]);
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?77c6827235cc32aff69e2594c7e4f6b7";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</body>
+</html>

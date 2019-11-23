@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover">
+    <title>自驾险</title>
+    <link href="./css/reset.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <style>
+        #termsbox {
+            /* padding: 36px; */
+            background-color: transparent;
+            /* background-color: #303B4F; */
+            /* border-radius: 5px; */
+            /* overflow: hidden; */
+            }
+    </style>
+    <script src="./js/common.js"></script>
+    <script>
+    var _hmt = _hmt || [];
+    </script>
+</head>
+<body>
+    <div class="container">
+        <a class="back" href="javascript:history.go(-1)"></a>
+
+        <div class="information">
+            <div class="header">
+                <h2 class="title">保障范围<span>(保全家)</span><em>1.意外身故/伤残10万元 </em><em>2.意外医疗1万元</em></h2>
+            </div>
+            <div class="content">
+                <div class="main">
+                    <form class="form" id="form" action="">
+                        <div class="form-item licenseno">
+                            <label class="form-label" for="licenseno">车牌号</label>
+                            <input type="text" class="form-input" id="licenseno" name="licenseno" placeholder="请输入车牌号" data-validation="required,licenseno">
+                        </div>
+                        <div class="form-item username">
+                            <label class="form-label" for="name">姓名</label>
+                            <input type="text" class="form-input" id="name" name="name" placeholder="请输入投保人姓名" data-validation="required">
+                        </div>
+                        <div class="form-item idcard">
+                            <label class="form-label" for="idcard">身份证</label>
+                            <input type="text" class="form-input" id="idcard" name="idcard" placeholder="请输入投保人身份证号" data-validation="required,idcard">
+                        </div>
+                        <div class="form-item mobile">
+                            <label class="form-label" for="phone">手机号码</label>
+                            <input type="number" class="form-input" id="mobile" name="mobile" placeholder="请输入手机号" data-validation="required,mobile">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="side">
+                    <ul class="menu">
+                        <li data-product-id="1" class="menu-item menu-active">￥5 / <span>1天</span></li>
+                        <li data-product-id="2" class="menu-item">￥10 / <span>3天</span></li>
+                        <li data-product-id="3" class="menu-item">￥20 / <span>7天</span></li>
+                    </ul>
+
+                    <button class="btn  btn-large" id="buy">确认购买</button>
+                </div>
+            </div>
+
+            <div class="foot">
+                <span id="agreement"><i class="checked"></i>我已阅读并同意</span>
+                <a id="terms">《投保须知》</a>
+                <a id="conditions">《保险条款》</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="./js/libs/jquery.min.js"></script>
+    <script src="./js/libs/jquery.qrcode.min.js"></script>
+    <script src="./js/libs/jquery.form-validator.min.js"></script>
+    <script src="./js/libs/jquery.simplemodal.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.77/jquery.form-validator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplemodal/1.4.4/jquery.simplemodal.min.js"></script>
+    <script src="./js/form.js"></script>
+    <script>
+    (function() {
+        _hmt.push(['_setAutoPageview', false]);
+        _hmt.push(['_trackPageview', '/m5/' + location.hash]);
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?77c6827235cc32aff69e2594c7e4f6b7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</body>
+</html>

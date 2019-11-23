@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>自驾险</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet"></head>
+    <style>
+        .inputWrap .content{
+            display: flex;
+        }
+        .inputWrap .content .inputText{
+            width: 660px;
+            height: 60px;
+            background: #2a2d3c;
+            position: relative;
+        }
+        .inputWrap .content .inputText input{
+            border: none;
+            outline: none;
+            background: transparent;
+            display: block;
+            width: 600px;
+            height: 100%;
+            font-size: 26px;
+            line-height: 60px;
+            color: #fff;
+            text-indent: 45px;
+        }
+        .inputWrap .content .inputText img{
+            position: absolute;
+            right: 16px;
+            top: 12px;
+            width: 33px;
+            height: 33px;
+        }
+        input:-ms-input-placeholder {
+            color: #fff;
+        }
+        input::-webkit-input-placeholder {
+            color: #fff; 
+        }
+        .inputWrap .content .inputBtn{
+            width: 168px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            margin-left:30px;
+            border-radius: 5px 5px;
+        }
+        .inputWrap .content .inputBtn.success{
+            background: #11afd7;
+        }
+        .inputWrap .content .inputBtn.fail{
+            border: 1px solid #fff;
+        }
+    </style>
+    <script>
+    var _hmt = _hmt || [];
+    </script>
+<body >
+    
+    <div class="common-wrap inputWrap">
+        <div class="back">
+            <a href="javascript:;"><img src="./img/back_icon.png" alt=""></a>
+            <h6></h6>
+        </div>
+
+        <div class="content">
+            <div class="inputText">
+                <input type="text" placeholder="" />
+                <img class="closebtn" src="./img/input_close.png" />
+            </div>
+            <div class="inputBtn success">确定</div>
+            <div class="inputBtn fail">取消</div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplemodal/1.4.4/jquery.simplemodal.min.js"></script>
+<script>
+    $(function(){
+        var default_settings = {
+            close: false,
+            onShow: function (dialog) {
+                setTimeout(function () {
+                    $.modal.close();
+                }, 1000);
+            }
+        };
+        var types = {
+            licenseno:{
+                placeholder:"请输入车牌号",
+                msg:'请填写正确的车牌号',
+                defaultValue:sessionStorage.getItem('form-licenseno')||''
+            },
+            name:{
+                placeholder:"请输入投保人姓名",
+                msg:'请填写正确的投保人姓名',
+                defaultValue:sessionStorage.getItem('form-name')||''
+            },
+            idcard:{
+                placeholder:"请输入投保人身份证号",
+                msg:'请填写正确的身份证号',
+                defaultValue:sessionStorage.getItem('form-idcard')||''
+            },
+            mobile:{
+                placeholder:"请输入手机号",
+                msg:'请填写正确的手机号码',
+                defaultValue:sessionStorage.getItem('form-mobile')||''
+            }
+        }
+        $('.closebtn').click(function(){
+            $('.inputText input').val('')
+        })
+        var type = location.search ? location.search.substring(1).split('=')[1] : "";
+        $('.inputText input').attr('placeholder',types[type].placeholder)
+        $('.inputText input').val(types[type].defaultValue)
+
+        // if(type==='licenseno'){
+        //     $('.inputText input').on('input',function(){
+        //         $('.inputText input').val($('.inputText input').val().toUpperCase());
+        //     })
+        // }
+
+        function back(){
+            history.go(-1)
+        }
+        
+        $('.back a').click(back);
+        $('.fail').click(back);
+        $('.success').click(function(){
+            var value = $('.inputText input').val()
+            var isRight = true
+            switch( type ) {
+                case 'mobile':
+                    isRight =/^0?1[3|4|5|7|8][0-9]\d{8}$/.test(value);
+                    break;
+                case 'licenseno':
+                    value = value.toUpperCase()
+                    isRight =/^.{1}[a-zA-Z]{1}[-]?[a-zA-Z_0-9]{5,6}$/.test(value)
+                    break;
+                case 'name':
+                   
+                    break;
+                case 'idcard':
+                isRight = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}[xX0-9]{1}$/.test(value);
+                    break;
+            }
+
+            if(!isRight){
+                $.modal("<div><h1>" + types[type].msg + "</h1></div>", default_settings);
+                return;
+            }
+
+            sessionStorage.setItem('form-'+type,value)
+            back()
+        })
+    })
+</script>
+<script>
+(function() {
+  _hmt.push(['_setAutoPageview', false]);
+  _hmt.push(['_trackPageview', '/keda/' + location.hash]);
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?77c6827235cc32aff69e2594c7e4f6b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

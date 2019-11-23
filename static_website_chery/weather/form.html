@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>恶劣天气行车意外保险</title>
+    <link href="./css/style.css" rel="stylesheet"></head>
+    <script>
+    var _hmt = _hmt || [];
+    </script>
+<body>
+    <div class="container-form">
+        <div class="header">
+            <div class="title">
+                <h2>恶劣天气行车意外保险</h2>
+                <p class="desc">7座x24小时×10万元保障 <span class="price">5元</span></p>
+            </div>
+            <div class="button">
+                <button class="buy">确认购买</button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="main">
+                <div class="form">
+                    <form id="form" action="">
+                        <div class="licenseno">
+                            <label for="licenseno">车牌号</label>
+                            <input type="text" id="licenseno" name="licenseno" placeholder="请输入车牌号" data-validation="required,licenseno">
+                        </div>
+                        <div class="username">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" placeholder="请输入投保人姓名" data-validation="required">
+                        </div>
+                        <div class="idcard">
+                            <label for="idcard">身份证</label>
+                            <input type="text" id="idcard" name="idcard" placeholder="请输入投保人身份证号" data-validation="required,idcard">
+                        </div>
+                        <div class="mobile">
+                            <label for="phone">手机号码</label>
+                            <input type="text" id="mobile" name="mobile" placeholder="请输入手机号" data-validation="required,mobile">
+                        </div>
+                    </form>
+                </div>
+                <p class="term_and_condition"><i class="checked"></i> 我已阅读并同意 <span id="terms">《投保须知》</span><span id="conditions">《保险条款》</span></p>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-form-validator/2.3.77/jquery.form-validator.min.js"></script>
+<script src="https://cdn.bootcss.com/simplemodal/1.4.4/jquery.simplemodal.min.js"></script>
+<script src="./js/form.js"></script>
+<script>
+(function() {
+  _hmt.push(['_setAutoPageview', false]);
+  _hmt.push(['_trackPageview', '/m5/' + location.hash]);
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?77c6827235cc32aff69e2594c7e4f6b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

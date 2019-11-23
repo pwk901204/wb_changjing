@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>自驾险</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet"></head>
+    <script>
+    var _hmt = _hmt || [];
+    </script>
+<body style="width:1000px;height:720px">
+    <div class="container-index container-fluid">
+        <div class="content row">
+            <div class="left">
+                <img src="./img/bg-card.png" class="img-responsive">
+            </div>
+            <div class="right" style="height: 400px;">
+                <h1>驾乘意外险</h1>
+                <p class="desc">7座 X 24小时 X 10万元保障</p>
+                <p class="price">5元<span>起</span><span class="action"> </span></p>
+                <p><button id="buy" >立即购买</button></p>
+            </div>
+            <div class="qrcode">
+                <div class="qrcode-wrapper">
+                    <div id="qrcode"></div>
+                </div>
+                <p>手机扫码也能买</p>
+            </div>
+        </div>
+        <div class="back">
+            <a href="javascript:closeWin()"><img src="./img/back.png" alt=""></a>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+(function() {
+  _hmt.push(['_setAutoPageview', false]);
+  _hmt.push(['_trackPageview', '/keda/' + location.hash]);
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?77c6827235cc32aff69e2594c7e4f6b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

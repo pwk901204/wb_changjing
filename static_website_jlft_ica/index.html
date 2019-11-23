@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>自驾险</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet"></head>
+    <style>
+       
+        .container-index .content {
+            background: -webkit-linear-gradient(#22242d,#303340); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(#22242d,#303340); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#22242d,#303340); /* Firefox 3.6 - 15 */
+            background: linear-gradient(#22242d,#303340); /* 标准的语法 */
+            padding: 42px 38px; 
+            border-radius: 10px 10px;
+            overflow: hidden;
+        }
+
+        .container-index .content .left {
+            float: left;
+            width: 290px;
+            height: 350px;
+        }
+
+        .container-index .content .right {
+            float: left;
+            width: 490px;
+            padding: 0 20px 0 35px;
+        }
+
+        .container-index .content .right h1 {
+            margin: 34px 0 0 0;
+            font-size: 40px;
+            line-height: 40px;
+            color: #fff;
+        }
+
+        .container-index .content .right .desc {
+            font-size: 26px;
+            line-height: 50px;
+            margin: 20px 0 0 0;
+            color: #aab8cd;
+            height: 150px;
+        }
+
+        .container-index .content .right .buy {
+            font-size: 30px;
+            margin: 40px 0 0 0;
+            color: #4dc8e7;
+        }
+
+        .container-index .qrcode {
+            float: right;
+            padding:0 20px 0 40px;
+            height: 434px;
+            margin: -42px 0;
+            border-left: 1px dashed #464857;
+        }
+
+        .container-index .qrcode .qrcode-wrapper {
+            width: 235px;
+            height: 235px;
+            border: 10px solid #fff;
+            margin-top: 78px;
+        }
+
+
+        .container-index .qrcode p {
+            font-size: 30px;
+            color: #fff;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+
+        .container-index .bugLink{
+            position: absolute;
+            right:100px;
+            bottom: 24px;
+            color: #fff;
+            font-size: 26px;
+        }
+    </style>
+    <script>
+    var _hmt = _hmt || [];
+    </script>
+<body >
+    
+    <div class="common-wrap container-index container-fluid">
+        <div class="back">
+            <a href="javascript:closeWin()"><img src="./img/back_icon.png" alt=""></a>
+            <h6>自驾险</h6>
+        </div>
+
+        <div class="content">
+            <img src="./img/index_img.png" class="left">
+            <div class="right">
+                <h1>驾乘意外险</h1>
+                <p class="desc">7座 X 24小时 X 10万元保障</p>
+                <p class="buy" id="buy">立即购买  ></p>
+            </div>
+            <div class="qrcode">
+                <div class="qrcode-wrapper" id="qrcode"></div>
+                <p>手机扫码也能买</p>
+            </div>
+        </div>
+        <div class="bugLink">购买记录</div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+(function() {
+  _hmt.push(['_setAutoPageview', false]);
+  _hmt.push(['_trackPageview', '/keda/' + location.hash]);
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?77c6827235cc32aff69e2594c7e4f6b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

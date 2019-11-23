@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>恶劣天气行车意外保险</title>
+    <link href="./css/style.css" rel="stylesheet"></head>
+    <script>
+    var _hmt = _hmt || [];
+    </script>
+<body>
+    <div class="container-pay">
+      <div class="qrcode">
+        <div class="content">
+            <div class="qrcode-wrapper">
+                <div id="qrcode"></div>
+            </div>
+          <p>应付金额: <span id="price"> <span>元</span></span></p>
+        </div>
+      </div>
+      <div class="content">
+        <div class="paymethods">
+          <div data-paymethod="wx_pub_qr" class="active">
+            <img src="./img/wechat.png" alt=""> <span>微信支付</span>
+          </div>
+          <div data-paymethod="alipay_qr">
+            <img src="./img/alipay.png" alt=""> <span>支付宝</span>
+          </div>
+        </div>
+      </div>
+    </div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="./js/pay.js"></script>
+<script>
+(function() {
+  _hmt.push(['_setAutoPageview', false]);
+  _hmt.push(['_trackPageview', '/m5/' + location.hash]);
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?77c6827235cc32aff69e2594c7e4f6b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
